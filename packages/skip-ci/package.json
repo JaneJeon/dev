@@ -1,0 +1,40 @@
+{
+  "name": "skip-ci",
+  "version": "1.0.0",
+  "description": "✨ Automatically detect [skip ci] messages (and the like) in your last commit 🎉",
+  "bin": {
+    "skip-ci": "index.js"
+  },
+  "repository": "JaneJeon/skip-ci",
+  "author": "Jane Jeon <me@janejeon.dev>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "git",
+    "skip",
+    "CI",
+    "continuous",
+    "integration",
+    "CircleCI",
+    "GitLab",
+    "Travis",
+    "Azure",
+    "Pipelines",
+    "agile",
+    "Jenkins",
+    "cli",
+    "test",
+    "detect",
+    "hooks",
+    "githooks",
+    "commit",
+    "message"
+  ],
+  "devDependencies": {
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.0",
+    "prettier-standard": "^16.2.1"
+  }
+}
