@@ -1,22 +1,29 @@
 <h1 align="center">Welcome to skip-ci 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://janejeon.github.io/skip-ci" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="https://github.com/JaneJeon/skip-ci/blob/master/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
-  </a>
-</p>
+
+[![GitHub Actions](https://github.com/JaneJeon/skip-ci/workflows/build/badge.svg)](https://github.com/JaneJeon/skip-ci/actions)
+[![Version](https://img.shields.io/npm/v/skip-ci)](https://www.npmjs.com/package/skip-ci)
+[![Downloads](https://img.shields.io/npm/dt/skip-ci)](https://www.npmjs.com/package/skip-ci)
+[![install size](https://packagephobia.now.sh/badge?p=skip-ci)](https://packagephobia.now.sh/result?p=skip-ci)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=JaneJeon/skip-ci)](https://dependabot.com)
+[![License](https://img.shields.io/npm/l/skip-ci)](https://github.com/JaneJeon/skip-ci/blob/master/LICENSE)
+[![Docs](https://img.shields.io/badge/docs-github-blue)](https://janejeon.github.io/skip-ci)
+[![Standard code style](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Prettier code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 > ✨ Automatically detect [skip ci] messages (and the like) in your last commit 🎉
 
 ### 🏠 [Homepage](https://github.com/JaneJeon/skip-ci)
 
+When you include either a `[skip ci]` or a `[ci skip]` in your commit message, (most) CI systems understand it to mean, well, CI. This is generally useful when you're updating non-code portions of the repo, such as documentation or when you're fixing something irrelevant to the codebase.
+
+However, if you're like me, you might use git hooks (perhaps using `husky`) to prevent bad code from being pushed in the first place by making tests run during `pre-push` hook. This generally works great, but it still runs the tests even when you add a `[skip ci]` to your commit message.
+
+That's where this tool comes in. Just call `skip-ci` and you'll be able to detect & skip whatever commands you'd like when you don't want to run any tests. For an example of this, see https://github.com/JaneJeon/objection-authorize.
+
 ## Install
 
 ```sh
-npm i skip-ci
+npm i skip-ci -D
 ```
 
 ## Usage
@@ -25,17 +32,19 @@ npm i skip-ci
 skip-ci && "Skipping CI..." || echo "Running tests..."
 ```
 
-## Run tests
+## Development
 
-```sh
-To test, simply TODO:
-```
+Because we rely on a subrepo for testing the `skip-ci` tool, when cloning, make sure you add the `--recursive` flag.
+
+Then, you can test `skip-ci` (or more specifically, `cli.js`) by running `npm test`, which will go through each commit of the test repo (`repo/`) and check that the tool recognizes `[skip ci]` and `[ci skip]` and returns the appropriate exit codes.
+
+And don't forget to `npm i` when developing to install `devDependencies` (mainly linting).
 
 ## Author
 
 👤 **Jane Jeon <JaneJeon9719@gmail.com>**
 
-- Website: janejeon.dev
+- Website: https://janejeon.dev
 - Github: [@JaneJeon](https://github.com/JaneJeon)
 
 ## 🤝 Contributing
