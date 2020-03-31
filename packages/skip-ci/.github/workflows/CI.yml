@@ -17,8 +17,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        with:
-          submodules: true # we need sample submodule to test
+      - name: Pull submodule # we need sample submodule to test
+        run: git submodule update --init --recursive
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
