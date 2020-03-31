@@ -22,7 +22,7 @@ npm i skip-ci
 ## Usage
 
 ```sh
-skip-ci || echo "Running tests..."
+skip-ci && "Skipping CI..." || echo "Running tests..."
 ```
 
 ## Run tests

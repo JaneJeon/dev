@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # use subrepo for testing
-cd skip-ci-test
+cd repo
 
 # first commit contains no skip message
 git reset --hard 31f3670cfcc67252bfa6af8e0a4b1f8eb3d92ef4
@@ -20,9 +20,9 @@ e3=$?
 
 git reset --hard HEAD
 
-if [[ $e1 -eq 0 && $e2 -eq 1 && $e3 -eq 1 ]]; then
+if [[ $e1 -eq 1 && $e2 -eq 0 && $e3 -eq 0 ]]; then
     echo 'Test passed!'
 else
-    echo "Test failed! Exit codes: $e1, $e2, $e3"
+    echo "Test failed! Exit codes: $e1, $e2, $e3, expected: 1, 0, 0"
     exit 1
 fi
