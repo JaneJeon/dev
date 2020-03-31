@@ -18,13 +18,15 @@ When you include either a `[skip ci]` or a `[ci skip]` in your commit message, (
 
 However, if you're like me, you might use git hooks (perhaps using `husky`) to prevent bad code from being pushed in the first place by making tests run during `pre-push` hook. This generally works great, but it still runs the tests even when you add a `[skip ci]` to your commit message.
 
-That's where this tool comes in. Just call `skip-ci` and you'll be able to detect & skip whatever commands you'd like when you don't want to run any tests. For an example of this, see https://github.com/JaneJeon/objection-authorize.
+That's where this tool comes in. Just call `skip-ci` and you'll be able to detect & skip whatever commands you'd like when you don't want to run any tests. To see an example, just look at this repo's `.huskyrc.yml`!
 
 ## Install
 
 ```sh
 npm i skip-ci -D
 ```
+
+This package has ZERO dependencies!
 
 ## Usage
 
