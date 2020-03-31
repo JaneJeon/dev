@@ -1,0 +1,3 @@
+[submodule "repo"]
+	path = repo
+	url = https://github.com/JaneJeon/skip-ci-test.git
