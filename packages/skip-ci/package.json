@@ -6,6 +6,10 @@
   "bin": {
     "skip-ci": "cli.js"
   },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
   "repository": "JaneJeon/skip-ci",
   "author": "Jane Jeon <me@janejeon.dev>",
   "license": "MIT",
