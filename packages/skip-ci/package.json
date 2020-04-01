@@ -1,6 +1,6 @@
 {
   "name": "skip-ci",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "✨ Automatically detect [skip ci] messages (and the like) in your last commit 🎉",
   "main": "index.js",
   "bin": {
