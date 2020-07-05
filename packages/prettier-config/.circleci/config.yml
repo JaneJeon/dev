@@ -4,7 +4,8 @@ orbs:
 jobs:
   build-and-test:
     executor:
-      name: node/lts
+      name: node/default
+      tag: lts
     steps:
       - checkout
       - node/install-packages
