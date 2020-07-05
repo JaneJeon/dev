@@ -1,2 +1,2 @@
-'**/*':
-  - prettier-standard --lint
+'*':
+  - prettier --write

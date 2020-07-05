@@ -14,14 +14,16 @@
   "author": "Jane Jeon <me@janejeon.dev>",
   "license": "MIT",
   "scripts": {
-    "lint": "prettier-standard --check --lint",
+    "lint": "prettier --check .",
     "test": "./test.sh"
   },
   "devDependencies": {
+    "@janejeon/prettier-config": "^1.0.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.1.0",
-    "prettier-standard": "^16.2.1"
+    "prettier": "^2.0.5"
   },
+  "prettier": "@janejeon/prettier-config",
   "keywords": [
     "git",
     "skip",
