@@ -1,6 +1,9 @@
 version: 2.1
+
 orbs:
   node: circleci/node@3
+  slack: circleci/slack@3
+
 jobs:
   build-and-test:
     executor:
@@ -12,6 +15,8 @@ jobs:
       - run:
           name: Lint
           command: npm run lint
+      - slack/notify-on-failure
+
 workflows:
   build-and-test:
     jobs:
