@@ -1,0 +1,15 @@
+{
+  "name": "@janejeon/prettier-config",
+  "version": "1.0.0",
+  "description": "Prettier 2.0 config",
+  "main": "index.json",
+  "repository": "JaneJeon/prettier-config",
+  "author": "Jane Jeon <me@janejeon.dev>",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "is-ci": "^2.0.0",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5"
+  }
+}
