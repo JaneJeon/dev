@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to skip-ci 👋</h1>
 
-[![GitHub Actions](https://github.com/JaneJeon/skip-ci/workflows/build/badge.svg)](https://github.com/JaneJeon/skip-ci/actions)
+[![CircleCI](https://circleci.com/gh/JaneJeon/skip-ci.svg?style=shield)](https://circleci.com/gh/JaneJeon/skip-ci)
 [![Version](https://img.shields.io/npm/v/skip-ci)](https://www.npmjs.com/package/skip-ci)
 [![Downloads](https://img.shields.io/npm/dt/skip-ci)](https://www.npmjs.com/package/skip-ci)
 [![install size](https://packagephobia.now.sh/badge?p=skip-ci)](https://packagephobia.now.sh/result?p=skip-ci)

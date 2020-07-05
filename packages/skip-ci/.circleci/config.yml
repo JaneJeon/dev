@@ -1,0 +1,46 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@3
+  slack: circleci/slack@3
+
+jobs:
+  lint:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          name: Lint
+          command: npm run lint
+  test:
+    parameters:
+      node-version:
+        type: string
+    executor:
+      name: node/default
+      tag: << parameters.node-version >>
+    steps:
+      - checkout
+      - run:
+          name: Pull submodules # we need sample submodule to test
+          command: git submodule update --init --recursive
+      - node/install-packages
+      - run:
+          name: Test with node.js v<< parameters.node-version >>
+          command: npm test
+      - slack/notify-on-failure
+
+workflows:
+  build-and-test:
+    jobs:
+      - lint
+      - test:
+          requires:
+            - lint
+          matrix:
+            parameters:
+              node-version:
+                - 12.16.0
+                - 10.19.0
