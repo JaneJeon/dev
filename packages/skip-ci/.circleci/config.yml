@@ -23,9 +23,6 @@ jobs:
       tag: << parameters.node-version >>
     steps:
       - checkout
-      - run:
-          name: Pull submodules # we need sample submodule to test
-          command: git submodule update --init --recursive
       - node/install-packages
       - run:
           name: Test with node.js v<< parameters.node-version >>
