@@ -6,6 +6,7 @@ orbs:
 
 jobs:
   build-and-test:
+    context: shared-vars
     executor:
       name: node/default
       tag: lts
