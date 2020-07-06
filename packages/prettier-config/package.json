@@ -12,7 +12,14 @@
     "prettier": "^2.0.5",
     "skip-ci": "^1.0.3"
   },
+  "peerDependencies": {
+    "prettier": "^2"
+  },
   "scripts": {
     "lint": "prettier --check ."
-  }
+  },
+  "keywords": [
+    "prettier",
+    "config"
+  ]
 }
