@@ -1,8 +1,8 @@
 {
   "name": "@janejeon/prettier-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Prettier 2.0 config",
-  "main": ".prettierrc",
+  "main": ".prettierrc.json",
   "repository": "JaneJeon/prettier-config",
   "author": "Jane Jeon <me@janejeon.dev>",
   "license": "ISC",
