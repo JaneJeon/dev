@@ -1,6 +1,6 @@
 {
   "name": "@janejeon/prettier-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Prettier 2.0 config",
   "main": ".prettierrc",
   "repository": "JaneJeon/prettier-config",
