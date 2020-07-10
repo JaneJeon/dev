@@ -1,0 +1,24 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@3
+  slack: circleci/slack@3
+
+jobs:
+  build-and-test:
+    executor:
+      name: node/default
+      tag: lts
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          name: Lint
+          command: npm run lint
+      - slack/notify-on-failure
+
+workflows:
+  build-and-test:
+    jobs:
+      - build-and-test:
+          context: shared-vars
