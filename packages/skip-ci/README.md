@@ -5,7 +5,6 @@
 [![Downloads](https://img.shields.io/npm/dt/skip-ci)](https://www.npmjs.com/package/skip-ci)
 [![install size](https://packagephobia.now.sh/badge?p=skip-ci)](https://packagephobia.now.sh/result?p=skip-ci)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=JaneJeon/skip-ci)](https://dependabot.com)
-[![License](https://img.shields.io/npm/l/skip-ci)](https://github.com/JaneJeon/skip-ci/blob/master/LICENSE)
 [![Docs](https://img.shields.io/badge/docs-github-blue)](https://janejeon.github.io/skip-ci)
 [![Standard code style](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Prettier code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
@@ -59,5 +58,5 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2020 [Jane Jeon <JaneJeon9719@gmail.com>](https://github.com/JaneJeon).<br />
-This project is [MIT](https://github.com/JaneJeon/skip-ci/blob/master/LICENSE) licensed.
+Copyright © 2021 [Jane Jeon <JaneJeon9719@gmail.com>](https://github.com/JaneJeon).<br />
+This project is [LGPL-3.0](https://github.com/JaneJeon/skip-ci/blob/master/LICENSE) licensed (TL;DR: please contribute back any improvements to this library).
