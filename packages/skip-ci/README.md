@@ -59,4 +59,4 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 Copyright © 2021 [Jane Jeon <JaneJeon9719@gmail.com>](https://github.com/JaneJeon).<br />
-This project is [LGPL-3.0](https://github.com/JaneJeon/skip-ci/blob/master/LICENSE) licensed (TL;DR: please contribute back any improvements to this library).
+This project is [LGPL](https://github.com/JaneJeon/skip-ci/blob/master/LICENSE) licensed (TL;DR: please contribute back any improvements to this library).
