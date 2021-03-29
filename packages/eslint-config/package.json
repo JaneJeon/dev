@@ -1,6 +1,6 @@
 {
   "name": "@janejeon/eslint-config",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "ESLint 7.0 config",
   "main": ".eslintrc.json",
   "repository": "JaneJeon/eslint-config",
@@ -15,7 +15,7 @@
   },
   "prettier": "@janejeon/prettier-config",
   "peerDependencies": {
-    "eslint": "^8",
+    "eslint": ">=7",
     "eslint-config-prettier": "^8",
     "eslint-plugin-import": "^2",
     "eslint-plugin-node": "^11",
