@@ -6,14 +6,13 @@
   "repository": "JaneJeon/prettier-config",
   "author": "Jane Jeon <me@janejeon.dev>",
   "license": "ISC",
+  "dependencies": {
+    "prettier": "^2.4.1"
+  },
   "devDependencies": {
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5",
-    "skip-ci": "^1.0.3"
-  },
-  "peerDependencies": {
-    "prettier": "^2"
+    "lint-staged": "^11.2.4",
+    "skip-ci": "^1.0.4"
   },
   "scripts": {
     "lint": "prettier --check ."

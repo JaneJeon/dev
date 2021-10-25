@@ -1,2 +1,2 @@
-'*':
+'*.{yml,js,json,md}':
   - prettier --write
