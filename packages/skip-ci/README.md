@@ -4,10 +4,6 @@
 [![Version](https://img.shields.io/npm/v/skip-ci)](https://www.npmjs.com/package/skip-ci)
 [![Downloads](https://img.shields.io/npm/dt/skip-ci)](https://www.npmjs.com/package/skip-ci)
 [![install size](https://packagephobia.now.sh/badge?p=skip-ci)](https://packagephobia.now.sh/result?p=skip-ci)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=JaneJeon/skip-ci)](https://dependabot.com)
-[![Docs](https://img.shields.io/badge/docs-github-blue)](https://janejeon.github.io/skip-ci)
-[![Standard code style](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![Prettier code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 > ✨ Automatically detect [skip ci] messages (and the like) in your last commit 🎉
 
