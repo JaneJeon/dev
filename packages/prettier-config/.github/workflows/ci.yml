@@ -27,7 +27,7 @@ jobs:
           cache: 'npm'
         env:
           CACHE_KEY: npm-cache-key-node-v${{ matrix.node-version }}
-      - run: npm i
+      - run: npm ci
   lint:
     needs: install
 
@@ -46,5 +46,5 @@ jobs:
           cache: 'npm'
         env:
           CACHE_KEY: npm-cache-key-node-v${{ matrix.node-version }}
-      - run: npm i # by now, dependencies have been cached
+      - run: npm ci # by now, dependencies have been cached
       - run: npm run lint
