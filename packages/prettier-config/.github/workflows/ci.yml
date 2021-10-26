@@ -20,8 +20,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - &setup-node
-        name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
@@ -40,6 +39,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - *setup-node
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+        env:
+          CACHE_KEY: npm-cache-key-node-v${{ matrix.node-version }}
       - run: npm i # by now, dependencies have been cached
       - run: npm run lint
