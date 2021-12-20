@@ -21,8 +21,6 @@ jobs:
       - node/install-packages
       - run: npm run lint:prettier
       - run: npm run lint:eslint -- --format junit --output-file reports/eslint/results.xml
-      - store_test_results:
-          path: reports
   test:
     <<: *runner
     <<: *size
@@ -34,14 +32,14 @@ jobs:
       - run: git submodule sync
       - node/install-packages
       - run: npm test
-      - slack/notify:
-          event: fail
-          template: basic_fail_1
 
 workflows:
   build:
     jobs:
-      - lint
+      - lint:
+          post-steps:
+            - store_test_results:
+                path: reports
       - test:
           context: shared-vars
           requires:
@@ -51,3 +49,7 @@ workflows:
               node-version:
                 - lts
                 - current
+          post-steps:
+            - slack/notify:
+                event: fail
+                template: basic_fail_1
