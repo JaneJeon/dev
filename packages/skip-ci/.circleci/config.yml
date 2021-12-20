@@ -23,6 +23,7 @@ jobs:
       tag: << parameters.node-version >>
     steps:
       - checkout
+      - run: git submodule sync
       - node/install-packages
       - run:
           name: Test with node.js v<< parameters.node-version >>
@@ -32,7 +33,7 @@ jobs:
           template: basic_fail_1
 
 workflows:
-  build-and-test:
+  build:
     jobs:
       - lint
       - test:
