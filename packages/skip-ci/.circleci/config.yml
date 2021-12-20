@@ -1,0 +1,46 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4
+  slack: circleci/slack@4
+
+jobs:
+  lint:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          name: Lint
+          command: npm run lint
+  test:
+    parameters:
+      node-version:
+        type: string
+    executor:
+      name: node/default
+      tag: << parameters.node-version >>
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          name: Test with node.js v<< parameters.node-version >>
+          command: npm test
+      - slack/notify:
+          event: fail
+          template: basic_fail_1
+
+workflows:
+  build-and-test:
+    jobs:
+      - lint
+      - test:
+          context: shared-vars
+          requires:
+            - lint
+          matrix:
+            parameters:
+              node-version:
+                - lts
+                - current
