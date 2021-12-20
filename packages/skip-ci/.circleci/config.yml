@@ -1,26 +1,34 @@
 version: 2.1
 
+aliases:
+  - &runner
+    executor:
+      name: node/default
+      tag: lts
+  - &size
+    resource_class: small
+
 orbs:
   node: circleci/node@4
   slack: circleci/slack@4
 
 jobs:
   lint:
-    executor:
-      name: node/default
+    <<: *runner
+    <<: *size
     steps:
       - checkout
       - node/install-packages
-      - run:
-          name: Lint
-          command: npm run lint
+      - run: npm run lint:prettier
+      - run: npm run lint:eslint -- --format junit --output-file reports/eslint/results.xml
+      - store_test_results:
+          path: reports
   test:
+    <<: *runner
+    <<: *size
     parameters:
       node-version:
         type: string
-    executor:
-      name: node/default
-      tag: << parameters.node-version >>
     steps:
       - checkout
       - run: git submodule sync
