@@ -25,9 +25,7 @@ jobs:
       - checkout
       - run: git submodule sync
       - node/install-packages
-      - run:
-          name: Test with node.js v<< parameters.node-version >>
-          command: npm test
+      - run: npm test
       - slack/notify:
           event: fail
           template: basic_fail_1
