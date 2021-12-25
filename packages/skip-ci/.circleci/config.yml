@@ -7,6 +7,10 @@ aliases:
       tag: lts
   - &size
     resource_class: small
+  - &params
+    parameters:
+      node-version:
+        type: string
 
 orbs:
   node: circleci/node@4
@@ -16,6 +20,7 @@ jobs:
   lint:
     <<: *runner
     <<: *size
+    <<: *params
     steps:
       - checkout
       - node/install-packages
@@ -24,9 +29,7 @@ jobs:
   test:
     <<: *runner
     <<: *size
-    parameters:
-      node-version:
-        type: string
+    <<: *params
     steps:
       - checkout
       - run: git submodule sync
@@ -37,6 +40,7 @@ workflows:
   build:
     jobs:
       - lint:
+          node-version: lts
           post-steps:
             - store_test_results:
                 path: reports
