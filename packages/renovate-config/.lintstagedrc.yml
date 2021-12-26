@@ -1,5 +1,2 @@
-'*.{yml,js,json,md}':
+'*.{yml,yaml,json,md}':
   - prettier --write
-
-'*.js':
-  - eslint --fix
