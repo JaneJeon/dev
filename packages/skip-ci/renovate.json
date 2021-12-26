@@ -6,7 +6,6 @@
   "reviewers": ["JaneJeon"],
   "fetchReleaseNotes": true,
   "prHourlyLimit": 0,
-  "preserveSemverRanges": true,
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
@@ -16,6 +15,10 @@
     {
       "matchUpdateTypes": ["patch", "pin", "digest"],
       "automerge": true
+    },
+    {
+      "matchPackagePatterns": ["*"],
+      "rangeStrategy": "replace"
     }
   ],
   "vulnerabilityAlerts": {
