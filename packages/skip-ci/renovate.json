@@ -6,6 +6,7 @@
   "reviewers": ["JaneJeon"],
   "fetchReleaseNotes": true,
   "prHourlyLimit": 0,
+  "preserveSemverRanges": true,
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
