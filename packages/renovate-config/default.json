@@ -1,0 +1,28 @@
+{
+  "extends": ["config:base"],
+  "schedule": "every weekend",
+  "timezone": "America/New_York",
+  "labels": ["dependencies"],
+  "reviewers": ["JaneJeon"],
+  "fetchReleaseNotes": true,
+  "prHourlyLimit": 0,
+  "ignoreDeps": ["husky"],
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "matchPackagePatterns": ["*"],
+      "rangeStrategy": "replace"
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "labels": ["security"]
+  }
+}
