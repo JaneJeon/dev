@@ -3,6 +3,7 @@
 [![CircleCI](https://circleci.com/gh/JaneJeon/skip-ci/tree/master.svg?style=shield)](https://circleci.com/gh/JaneJeon/skip-ci/tree/master)
 [![Version](https://img.shields.io/npm/v/skip-ci)](https://www.npmjs.com/package/skip-ci)
 [![Downloads](https://img.shields.io/npm/dt/skip-ci)](https://www.npmjs.com/package/skip-ci)
+[![Docs](https://img.shields.io/badge/docs-github-blue)](https://janejeon.github.io/skip-ci)
 
 > ✨ Automatically detect [skip ci] messages (and the like) in your last commit 🎉
 
