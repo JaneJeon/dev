@@ -6,6 +6,9 @@
   "repository": "JaneJeon/prettier-config",
   "author": "Jane Jeon <me@janejeon.dev>",
   "license": "ISC",
+  "scripts": {
+    "lint": "prettier --check ."
+  },
   "dependencies": {
     "prettier": "^2.4.1"
   },
@@ -13,9 +16,6 @@
     "husky": "^4.2.5",
     "lint-staged": "12.1.4",
     "skip-ci": "^1.0.4"
-  },
-  "scripts": {
-    "lint": "prettier --check ."
   },
   "keywords": [
     "prettier",
