@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@janejeon/prettier-config": "^1.1.0",
+    "eslint-config-react-app": "^7.0.0",
     "husky": "^4.2.5",
     "lint-staged": "12.1.4",
     "node-notifier": "^10.0.0",
