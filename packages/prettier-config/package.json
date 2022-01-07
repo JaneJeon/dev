@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "husky": "^4.2.5",
-    "lint-staged": "12.1.5",
+    "lint-staged": "12.1.6",
     "skip-ci": "^1.0.4"
   },
   "keywords": [
