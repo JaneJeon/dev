@@ -23,5 +23,8 @@
   ],
   "vulnerabilityAlerts": {
     "labels": ["security"]
+  },
+  "git-submodules": {
+    "enabled": true
   }
 }
