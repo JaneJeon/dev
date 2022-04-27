@@ -22,7 +22,16 @@ jobs:
     <<: *params
     steps:
       - checkout
-      - node/install-packages
+      - restore_cache:
+          keys:
+            - node-modules-v1-{{ arch }}-{{ .Branch }}-{{ checksum "package.json" }}
+            - node-modules-v1-{{ arch }}-{{ .Branch }}
+            - node-modules-v1
+      - run: npm i
+      - save_cache:
+          key: node-modules-v1-{{ arch }}-{{ .Branch }}-{{ checksum "package.json" }}
+          paths:
+            - node_modules
       - run: npm run lint
 
 workflows:
