@@ -11,7 +11,7 @@
     "cli.js"
   ],
   "repository": "JaneJeon/skip-ci",
-  "author": "Jane Jeon <me@janejeon.dev>",
+  "author": "Jane Jeon <me@janejeon.com>",
   "license": "LGPL-3.0",
   "engines": {
     "node": ">=14"
