@@ -1,4 +1,5 @@
 {
+  "name": "@janejeon/renovate-config",
   "scripts": {
     "lint": "prettier --check ."
   },
