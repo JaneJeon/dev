@@ -1,11 +1,9 @@
 {
   "name": "dev",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "bootstrap": "lerna bootstrap --hoist"
   },
   "devDependencies": {
     "husky": "^8.0.1",

@@ -15,7 +15,7 @@
   "devDependencies": {
     "husky": "^4.2.5",
     "lint-staged": "12.4.0",
-    "skip-ci": "^1.0.4"
+    "skip-ci": "*"
   },
   "keywords": [
     "prettier",

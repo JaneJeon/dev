@@ -12,19 +12,19 @@
   "dependencies": {
     "eslint": "^8.5.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-config-standard": "^16.0.3",
+    "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.26.1"
   },
   "devDependencies": {
-    "@janejeon/prettier-config": "^1.1.0",
+    "@janejeon/prettier-config": "*",
     "eslint-config-react-app": "^7.0.0",
     "husky": "^4.2.5",
     "lint-staged": "^12.3.8",
     "node-notifier": "^10.0.0",
-    "skip-ci": "^1.0.4"
+    "skip-ci": "*"
   },
   "prettier": "@janejeon/prettier-config",
   "keywords": [
