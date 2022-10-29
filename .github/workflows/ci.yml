@@ -1,0 +1,63 @@
+name: Node CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          # This action automatically includes the OS as part of the cache key,
+          # and will hash all of the package.json's together
+          # (we don't have lockfiles, since this is a monorepo of libraries).
+          cache-dependency-path: '**/package.json'
+      - name: Install Dependencies and Bootstrap
+        run: npm run bootstrap
+      - name: Lint PR
+        # For PRs, run lint only on the changed files
+        if: ${{ github.event_name == 'pull_request' }}
+        run: npm run lint-pr
+      - name: Lint Repo
+        # For pushes directly to master, run lint on the whole repo
+        if: ${{ github.event_name == 'push' }}
+        run: npm run lint
+
+  build:
+    runs-on: ubuntu-latest
+    needs: lint
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version:
+          - lts/*
+          - lts/-1
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          # This should fetch all the commits within the submodule,
+          # even if the action fetches past 1 commit by default,
+          # as the underlying git command that runs is a `submodule sync`.
+          submodules: true
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+          cache-dependency-path: '**/package.json'
+      - name: Install Dependencies and Bootstrap
+        run: npm run bootstrap
+      - name: Test
+        run: npm test # we don't have anything that warrants a JUnit test file yet
