@@ -9,8 +9,8 @@
     "lint:prettier": "prettier --check .",
     "lint:eslint": "eslint .",
     "lint-pr": "run-s lint-pr:*",
-    "lint-pr:prettier": "prettier --check $(git diff origin/master... --name-only) --no-error-on-unmatched-pattern",
-    "lint-pr:eslint": "eslint . $(git diff origin/master... --name-only -- '*.js' '*.jsx' '*.ts' '*.tsx') --no-error-on-unmatched-pattern",
+    "lint-pr:prettier": "prettier --check $(git diff refs/remotes/origin/master... --name-only) --no-error-on-unmatched-pattern",
+    "lint-pr:eslint": "eslint . $(git diff refs/remotes/origin/master... --name-only -- '*.js' '*.jsx' '*.ts' '*.tsx') --no-error-on-unmatched-pattern",
     "test": "lerna run test --since=origin/master"
   },
   "devDependencies": {
