@@ -1,0 +1,2 @@
+'*.{yml,js,json,md}':
+  - echo 'not doing anything atm'

@@ -1,0 +1,37 @@
+version: 2.1
+
+aliases:
+  - &runner
+    executor:
+      name: node/default
+      tag: << parameters.node-version >>
+  - &size
+    resource_class: small
+  - &params
+    parameters:
+      node-version:
+        type: string
+
+orbs:
+  node: circleci/node@5
+  slack: circleci/slack@4
+
+jobs:
+  lint:
+    <<: *runner
+    <<: *size
+    <<: *params
+    steps:
+      - checkout
+      - node/install-packages
+      - run: npm run lint:prettier
+      - run: npm run lint:eslint -- --format junit --output-file reports/eslint/results.xml
+
+workflows:
+  build:
+    jobs:
+      - lint:
+          node-version: lts
+          post-steps:
+            - store_test_results:
+                path: reports
