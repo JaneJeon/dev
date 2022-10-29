@@ -18,7 +18,7 @@
   },
   "scripts": {
     "pretest": "git submodule update --init --recursive",
-    "test": "./test.sh"
+    "test-FIXME": "./test.sh"
   },
   "keywords": [
     "git",
