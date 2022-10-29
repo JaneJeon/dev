@@ -39,7 +39,7 @@ And don't forget to `npm i` when developing to install `devDependencies` (mainly
 
 ## Author
 
-👤 **Jane Jeon <JaneJeon9719@gmail.com>**
+👤 **Jane Jeon <git@janejeon.com>**
 
 - Website: https://janejeon.dev
 - Github: [@JaneJeon](https://github.com/JaneJeon)
@@ -54,7 +54,7 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2022 [Jane Jeon <JaneJeon9719@gmail.com>](https://github.com/JaneJeon).<br />
+Copyright © 2022 [Jane Jeon <git@janejeon.com>](https://github.com/JaneJeon).<br />
 This project is [LGPL](https://github.com/JaneJeon/skip-ci/blob/master/LICENSE) licensed.
 
 TL;DR: you are free to import and use this library "as-is" in your code, without needing to make your code source-available or to license it under the same license as this library; however, if you do change this library and you distribute it (directly or as part of your code consuming this library), please do contribute back any improvements for this library and this library alone.

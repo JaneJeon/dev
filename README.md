@@ -1,5 +1,12 @@
 # Jane's Emporium (Monorepo) of Dev Tooling
 
+## Packages
+
+- [eslint-config](/packages/eslint-config/): shared ESLint config
+- [prettier-config](/packages/prettier-config/): shared Prettier config
+- [renovate-config](/packages/renovate-config/): shared Renovate config
+- [skip-ci](/packages/skip-ci/): ✨ Automatically detect [skip ci] messages (and the like) in your last commit 🎉
+
 ## Rationale
 
 I have a number of "dev tooling" libraries/packages that I maintain for my own personal use, but having them as N different repositories were getting too onerous to maintain (e.g. you need to update N different packages, and if you wanted to change something that was common across the repos, yup, going into the different repos, making sure they're up to date, making the changes, and then pushing it, N different times).
