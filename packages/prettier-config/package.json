@@ -13,8 +13,6 @@
     "prettier": "^2.4.1"
   },
   "devDependencies": {
-    "husky": "^4.2.5",
-    "lint-staged": "12.4.0",
     "skip-ci": "*"
   },
   "keywords": [

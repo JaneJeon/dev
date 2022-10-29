@@ -3,12 +3,13 @@
   "private": true,
   "scripts": {
     "prepare": "husky install",
-    "bootstrap": "lerna bootstrap --hoist"
+    "bootstrap": "lerna bootstrap --hoist",
+    "test": "lerna run test --since=origin/main"
   },
   "devDependencies": {
     "husky": "^8.0.1",
     "lerna": "^6.0.1",
     "lint-staged": "^13.0.3",
-    "skip-ci": "^1.0.4"
+    "skip-ci": "*"
   }
 }
