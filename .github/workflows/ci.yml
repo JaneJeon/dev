@@ -13,7 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Current Branch
+        uses: actions/checkout@v3
+      # Currently no way to do this with actions/checkout: https://github.com/actions/checkout/issues/578
+      - name: Checkout Master Branch
+        run: git fetch origin master --depth 1
       - name: Use Node.js LTS
         uses: actions/setup-node@v3
         with:
@@ -51,6 +55,8 @@ jobs:
           # even if the action fetches past 1 commit by default,
           # as the underlying git command that runs is a `submodule sync`.
           submodules: true
+      - name: Checkout Master Branch
+        run: git fetch origin master --depth 1
       - name: Use Node.js LTS
         uses: actions/setup-node@v3
         with:
