@@ -1,4 +1,5 @@
-'*.{yml,js,json,md}':
-  - echo 'not doing anything atm'
-# prettier --write
-# eslint --fix
+'*.{yml,yaml,js,json,ts,md}':
+  - prettier --write
+
+'*.{js,ts}':
+  - eslint --fix
