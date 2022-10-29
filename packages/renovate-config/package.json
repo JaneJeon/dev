@@ -1,13 +1,4 @@
 {
   "name": "@janejeon/renovate-config",
-  "scripts": {
-    "lint": "prettier --check ."
-  },
-  "devDependencies": {
-    "@janejeon/prettier-config": "*"
-  },
-  "prettier": "@janejeon/prettier-config",
-  "eslintConfig": {
-    "extends": "@janejeon"
-  }
+  "private": true
 }

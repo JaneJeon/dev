@@ -4,16 +4,10 @@
   "description": "Prettier 2.0 config",
   "main": ".prettierrc.json",
   "repository": "JaneJeon/prettier-config",
-  "author": "Jane Jeon <me@janejeon.dev>",
+  "author": "Jane Jeon <git@janejeon.com>",
   "license": "ISC",
-  "scripts": {
-    "lint": "prettier --check ."
-  },
   "dependencies": {
     "prettier": "^2.4.1"
-  },
-  "devDependencies": {
-    "skip-ci": "*"
   },
   "keywords": [
     "prettier",
