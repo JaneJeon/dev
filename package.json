@@ -9,8 +9,11 @@
     "lint:prettier": "prettier --check .",
     "lint:eslint": "eslint .",
     "lint-pr": "run-s lint-pr:*",
-    "lint-pr:prettier": "prettier --check $(git diff master... --name-only) --no-error-on-unmatched-pattern",
-    "lint-pr:eslint": "eslint . $(git diff master... --name-only -- '*.js' '*.jsx' '*.ts' '*.tsx') --no-error-on-unmatched-pattern",
+    "lint-pr:prettier": "prettier --check $(git diff origin/master.. --diff-filter=ACMRT --name-only) --no-error-on-unmatched-pattern",
+    "lint-pr:eslint": "eslint $(git diff origin/master.. --diff-filter=ACMRT --name-only -- '*.js' '*.jsx' '*.ts' '*.tsx') --no-error-on-unmatched-pattern",
+    "list-changed": "run-s list-changed:*",
+    "list-changed:git": "echo $(git diff origin/master.. --diff-filter=ACMRT --name-only)",
+    "list-changed:lerna": "lerna list --since=origin/master",
     "test": "lerna run test --since=origin/master"
   },
   "devDependencies": {
