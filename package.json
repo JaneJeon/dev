@@ -14,7 +14,8 @@
     "list-changed": "run-s list-changed:*",
     "list-changed:git": "echo $(git diff origin/master.. --diff-filter=ACMRT --name-only)",
     "list-changed:lerna": "lerna list --since=origin/master",
-    "test": "lerna run test --since=origin/master"
+    "test": "lerna run test",
+    "test-pr": "npm test -- --since=origin/master"
   },
   "devDependencies": {
     "@janejeon/eslint-config": "*",

@@ -69,5 +69,9 @@ jobs:
           cache-dependency-path: '**/package.json'
       - name: Install Dependencies and Bootstrap
         run: npm run bootstrap
-      - name: Test
-        run: npm test # we don't have anything that warrants a JUnit test file yet
+      - name: Test PR
+        if: ${{ github.event_name == 'pull_request' }}
+        run: npm run test-pr # we don't have anything that warrants a JUnit test file yet
+      - name: Test Repo
+        if: ${{ github.event_name == 'push' }}
+        run: npm test
