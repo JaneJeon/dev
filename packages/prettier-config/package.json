@@ -2,7 +2,7 @@
   "name": "@janejeon/prettier-config",
   "version": "1.1.2",
   "description": "Prettier 2.0 config",
-  "main": ".prettierrc.json",
+  "main": "prettierrc.json",
   "homepage": "https://github.com/JaneJeon/dev/tree/master/packages/prettier-config",
   "repository": {
     "type": "git",
