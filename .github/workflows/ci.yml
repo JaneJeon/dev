@@ -20,6 +20,8 @@ jobs:
       # Currently no way to do this with actions/checkout: https://github.com/actions/checkout/issues/578
       - name: Checkout Master Branch
         run: git fetch origin master --no-tags --depth=1
+      - name: Debug Files
+        run: git diff origin/master.. --diff-filter=ACMRT --name-only
       - name: Use Node.js LTS
         uses: actions/setup-node@v3
         with:
@@ -54,7 +56,6 @@ jobs:
       - name: Checkout HEAD^
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
           # This should fetch all the commits within the submodule,
           # even if the action fetches past 1 commit by default,
           # as the underlying git command that runs is a `submodule sync`.
