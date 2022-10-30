@@ -15,5 +15,10 @@
     "@commitlint/cli": "^17",
     "@commitlint/config-conventional": "^17",
     "@commitlint/config-lerna-scopes": "^17"
+  },
+  "overrides": {
+    "@commitlint/config-lerna-scopes": {
+      "lerna": "^6"
+    }
   }
 }
