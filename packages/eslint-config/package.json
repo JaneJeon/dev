@@ -1,7 +1,7 @@
 {
   "name": "@janejeon/eslint-config",
   "version": "3.0.0-3",
-  "description": "ESLint 7.0 config",
+  "description": "Shareable ESLint 8.0 config",
   "main": "eslintrc.json",
   "homepage": "https://github.com/JaneJeon/dev/tree/master/packages/eslint-config",
   "repository": {
