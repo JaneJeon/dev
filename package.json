@@ -18,6 +18,7 @@
     "test-pr": "npm test -- --since=origin/master"
   },
   "devDependencies": {
+    "@janejeon/commitlint-config": "*",
     "@janejeon/eslint-config": "*",
     "@janejeon/prettier-config": "*",
     "husky": "^8.0.1",
