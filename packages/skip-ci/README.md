@@ -1,13 +1,8 @@
 <h1 align="center">Welcome to skip-ci 👋</h1>
 
-[![CircleCI](https://circleci.com/gh/JaneJeon/skip-ci/tree/master.svg?style=shield)](https://circleci.com/gh/JaneJeon/skip-ci/tree/master)
-[![Version](https://img.shields.io/npm/v/skip-ci)](https://www.npmjs.com/package/skip-ci)
-[![Downloads](https://img.shields.io/npm/dt/skip-ci)](https://www.npmjs.com/package/skip-ci)
-[![Docs](https://img.shields.io/badge/docs-github-blue)](https://janejeon.github.io/skip-ci)
-
 > ✨ Automatically detect [skip ci] messages (and the like) in your last commit 🎉
 
-### 🏠 [Homepage](https://github.com/JaneJeon/skip-ci)
+### 🏠 [Homepage](https://github.com/JaneJeon/dev/tree/master/packages/skip-ci)
 
 When you include either a `[skip ci]` or a `[ci skip]` in your commit message, (most) CI systems understand it to mean, well, CI. This is generally useful when you're updating non-code portions of the repo, such as documentation or when you're fixing something irrelevant to the codebase.
 
@@ -46,7 +41,7 @@ And don't forget to `npm i` when developing to install `devDependencies` (mainly
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/JaneJeon/skip-ci/issues).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/JaneJeon/dev/issues).
 
 ## Show your support
 
@@ -55,6 +50,6 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 Copyright © 2022 [Jane Jeon <git@janejeon.com>](https://github.com/JaneJeon).<br />
-This project is [LGPL](https://github.com/JaneJeon/skip-ci/blob/master/LICENSE) licensed.
+This project is [LGPL](https://github.com/JaneJeon/dev/tree/master/packages/skip-ci/LICENSE) licensed.
 
 TL;DR: you are free to import and use this library "as-is" in your code, without needing to make your code source-available or to license it under the same license as this library; however, if you do change this library and you distribute it (directly or as part of your code consuming this library), please do contribute back any improvements for this library and this library alone.

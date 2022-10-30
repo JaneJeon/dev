@@ -3,7 +3,12 @@
   "version": "3.0.0-2",
   "description": "ESLint 7.0 config",
   "main": ".eslintrc.json",
-  "repository": "JaneJeon/eslint-config",
+  "homepage": "https://github.com/JaneJeon/dev/tree/master/packages/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JaneJeon/dev.git",
+    "directory": "packages/eslint-config"
+  },
   "author": "Jane Jeon <git@janejeon.com>",
   "license": "ISC",
   "dependencies": {
