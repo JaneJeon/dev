@@ -1,3 +1,5 @@
+[![Node CI](https://github.com/JaneJeon/dev/actions/workflows/ci.yml/badge.svg)](https://github.com/JaneJeon/dev/actions/workflows/ci.yml)
+
 # Jane's Emporium (Monorepo) of Dev Tooling
 
 ## Rationale
