@@ -3,9 +3,10 @@
   "npmClient": "npm",
   "version": "independent",
   "packages": ["packages/*"],
+  "ignoreChanges": ["**/*.md", "**/.!(npmignore)", "**/*.sh"],
   "command": {
     "bootstrap": {
-      "hoist": "**"
+      "hoist": "{@janejeon/*,skip-ci}"
     }
   }
 }
