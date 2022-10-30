@@ -13,11 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Current Branch
+      - name: Checkout HEAD^
         uses: actions/checkout@v3
-      # Currently no way to do this with actions/checkout: https://github.com/actions/checkout/issues/578
-      - name: Checkout Master Branch
-        run: git fetch origin master --depth 2
+        with:
+          fetch-depth: 2
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v34
       - name: Use Node.js LTS
         uses: actions/setup-node@v3
         with:
@@ -32,7 +34,7 @@ jobs:
       - name: Lint PR
         # For PRs, run lint only on the changed files
         if: ${{ github.event_name == 'pull_request' }}
-        run: npm run lint-pr
+        run: npm run lint-files -- ${{ steps.changed-files.outputs.all_changed_files }}
       - name: Lint Repo
         # For pushes directly to master, run lint on the whole repo
         if: ${{ github.event_name == 'push' }}
@@ -49,14 +51,14 @@ jobs:
           - lts/-1
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout HEAD^
+        uses: actions/checkout@v3
         with:
+          fetch-depth: 2
           # This should fetch all the commits within the submodule,
           # even if the action fetches past 1 commit by default,
           # as the underlying git command that runs is a `submodule sync`.
           submodules: true
-      - name: Checkout Master Branch
-        run: git fetch origin master --depth 2
       - name: Use Node.js LTS
         uses: actions/setup-node@v3
         with:
