@@ -8,5 +8,6 @@
     "bootstrap": {
       "hoist": "{@janejeon/*,skip-ci}"
     }
-  }
+  },
+  "useNx": true
 }

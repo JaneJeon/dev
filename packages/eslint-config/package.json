@@ -1,7 +1,7 @@
 {
   "name": "@janejeon/eslint-config",
   "version": "3.0.0-3",
-  "description": "Shareable ESLint 8.0 config",
+  "description": "Shareable ESLint 8.0 config (\"core\")",
   "main": "eslintrc.json",
   "homepage": "https://github.com/JaneJeon/dev/tree/master/packages/eslint-config",
   "repository": {
@@ -11,17 +11,13 @@
   },
   "author": "Jane Jeon <git@janejeon.com>",
   "license": "LGPL-3.0",
-  "dependencies": {
-    "eslint": "^8.5.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.26.1"
-  },
-  "devDependencies": {
-    "eslint-config-react-app": "^7.0.0"
+  "peerDependencies": {
+    "eslint": "^8",
+    "eslint-config-prettier": "^8",
+    "eslint-config-standard": "^17",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-node": "^11",
+    "eslint-plugin-promise": "^6"
   },
   "keywords": [
     "eslint",
