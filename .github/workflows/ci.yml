@@ -25,8 +25,6 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: npm
-      - name: Install Dependencies and Bootstrap
-        run: npm run bootstrap
       - name: Debug Branches
         run: npm run list-changed
       - name: Lint PR
@@ -62,8 +60,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
-      - name: Install Dependencies and Bootstrap
-        run: npm run bootstrap
       - name: Test PR
         if: ${{ github.event_name == 'pull_request' }}
         run: npm run test-pr # we don't have anything that warrants a JUnit test file yet
