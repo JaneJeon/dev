@@ -10,7 +10,7 @@
     "directory": "packages/commitlint-config"
   },
   "author": "Jane Jeon <git@janejeon.com>",
-  "license": "ISC",
+  "license": "LGPL-3.0",
   "peerDependencies": {
     "@commitlint/cli": "^17",
     "@commitlint/config-conventional": "^17",

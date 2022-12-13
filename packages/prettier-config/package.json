@@ -10,7 +10,7 @@
     "directory": "packages/prettier-config"
   },
   "author": "Jane Jeon <git@janejeon.com>",
-  "license": "ISC",
+  "license": "LGPL-3.0",
   "dependencies": {
     "prettier": "^2.4.1"
   },
