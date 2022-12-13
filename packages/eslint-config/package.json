@@ -19,6 +19,9 @@
     "eslint-plugin-node": "^11",
     "eslint-plugin-promise": "^6"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "eslint",
     "config"
