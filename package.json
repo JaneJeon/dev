@@ -1,9 +1,11 @@
 {
   "name": "dev",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "prepare": "husky install",
-    "bootstrap": "lerna bootstrap",
     "graph": "nx graph",
     "lint": "run-s lint:*",
     "lint:prettier": "prettier --check .",
@@ -18,6 +20,7 @@
     "test-pr": "npm test -- --since=origin/master"
   },
   "devDependencies": {
+    "@janejeon/commitlint-config": "*",
     "@janejeon/eslint-config": "*",
     "@janejeon/prettier-config": "*",
     "husky": "^8.0.1",
