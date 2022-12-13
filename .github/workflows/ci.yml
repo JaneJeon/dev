@@ -25,10 +25,6 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: npm
-          # This action automatically includes the OS as part of the cache key,
-          # and will hash all of the package.json's together
-          # (we don't have lockfiles, since this is a monorepo of libraries).
-          cache-dependency-path: '**/package.json'
       - name: Install Dependencies and Bootstrap
         run: npm run bootstrap
       - name: Debug Branches
@@ -66,7 +62,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
-          cache-dependency-path: '**/package.json'
       - name: Install Dependencies and Bootstrap
         run: npm run bootstrap
       - name: Test PR

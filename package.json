@@ -1,9 +1,11 @@
 {
   "name": "dev",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "prepare": "husky install",
-    "bootstrap": "lerna bootstrap",
     "graph": "nx graph",
     "lint": "run-s lint:*",
     "lint:prettier": "prettier --check .",
