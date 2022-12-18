@@ -1,4 +1,5 @@
 [![Node CI](https://github.com/JaneJeon/dev/actions/workflows/ci.yml/badge.svg)](https://github.com/JaneJeon/dev/actions/workflows/ci.yml)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/JaneJeon/dev/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/JaneJeon/dev/tree/master)
 
 # Jane's Emporium (Monorepo) of Dev Tooling
 
