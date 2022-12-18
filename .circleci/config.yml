@@ -1,0 +1,86 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@5
+  slack: circleci/slack@4
+
+jobs:
+  lint:
+    resource_class: small
+    executor:
+      name: node/default
+      tag: lts
+    steps:
+      - checkout
+      - &git-checkout-submodules
+        run:
+          name: Checkout Submodules
+          command: |
+            git submodule sync
+            git submodule update --init
+      - node/install-packages
+      - run:
+          name: Debug Branches
+          command: npm run list-changed
+      - when:
+          # For pushes directly to master, run lint on the whole repo
+          condition: &is-master
+            equal:
+              - master
+              - << pipeline.git.branch >>
+          steps:
+            - run:
+                name: Lint Repo
+                command: npm run lint
+      - unless:
+          # For PRs, run lint only on the changed files
+          condition: *is-master
+          steps:
+            - run:
+                name: Lint PR
+                command: npm run lint-pr
+  test:
+    parameters:
+      node-version:
+        type: string
+    resource_class: small
+    executor:
+      name: node/default
+      tag: << parameters.node-version >>
+    steps:
+      - checkout
+      - *git-checkout-submodules
+      - node/install-packages
+      - when:
+          condition: *is-master
+          steps:
+            - run:
+                name: Test Repo
+                command: npm test
+      - unless:
+          condition: *is-master
+          steps:
+            - run:
+                name: Test PR
+                command: npm run test-pr
+
+workflows:
+  ci:
+    jobs:
+      - lint
+      - test:
+          matrix:
+            parameters:
+              node-version:
+                - current
+                - lts
+          requires:
+            - lint
+          context: shared-vars
+          post-steps:
+            - when:
+                condition: *is-master
+                steps:
+                  - slack/notify:
+                      event: fail
+                      template: basic_fail_1
