@@ -16,10 +16,7 @@ jobs:
       - name: Checkout Current Branch
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.event.pull_request.head.sha }} # make HEAD present
-      # Currently no way to do this with actions/checkout: https://github.com/actions/checkout/issues/578
-      - name: Checkout Master Branch
-        run: git fetch origin master --no-tags --depth=1
+          fetch-depth: 0
       - name: Use Node.js LTS
         uses: actions/setup-node@v3
         with:
@@ -31,7 +28,7 @@ jobs:
         run: npm run list-changed
       - name: Validate all commits from PR
         if: ${{ github.event_name == 'pull_request' }}
-        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+        run: npx commitlint --from origin/master --verbose
       - name: Lint PR
         # For PRs, run lint only on the changed files
         if: ${{ github.event_name == 'pull_request' }}
@@ -55,11 +52,8 @@ jobs:
       - name: Checkout Current Branch
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
-      - name: Checkout Master Branch
-        run: git fetch origin master --no-tags --depth=1
-      - name: Checkout Submodules
-        run: git submodule sync
+          fetch-depth: 0
+          submodules: 'true'
       - name: Use Node.js LTS
         uses: actions/setup-node@v3
         with:
