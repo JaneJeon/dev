@@ -1,15 +1,26 @@
 version: 2.1
 
+aliases:
+  - &runner
+    executor:
+      name: node/default
+      tag: << parameters.node-version >>
+  - &size
+    resource_class: small
+  - &params
+    parameters:
+      node-version:
+        type: string
+
 orbs:
   node: circleci/node@5
   slack: circleci/slack@4
 
 jobs:
   lint:
-    resource_class: small
-    executor:
-      name: node/default
-      tag: lts
+    <<: *runner
+    <<: *size
+    <<: *params
     steps:
       - checkout
       - &git-checkout-submodules
@@ -39,14 +50,13 @@ jobs:
             - run:
                 name: Lint PR
                 command: npm run lint-pr
+      - run:
+          name: Lint Commit Messages
+          command: npx commitlint --from=origin/master --verbose
   test:
-    parameters:
-      node-version:
-        type: string
-    resource_class: small
-    executor:
-      name: node/default
-      tag: << parameters.node-version >>
+    <<: *runner
+    <<: *size
+    <<: *params
     steps:
       - checkout
       - *git-checkout-submodules
@@ -67,16 +77,17 @@ jobs:
 workflows:
   ci:
     jobs:
-      - lint
+      - lint:
+          node-version: '18.16'
       - test:
+          context: shared-vars
+          requires:
+            - lint
           matrix:
             parameters:
               node-version:
-                - current
-                - lts
-          requires:
-            - lint
-          context: shared-vars
+                - '18.16'
+                - '16.20'
           post-steps:
             - when:
                 condition: *is-master

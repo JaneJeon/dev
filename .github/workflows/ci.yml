@@ -29,6 +29,9 @@ jobs:
         run: npm ci
       - name: Debug Branches
         run: npm run list-changed
+      - name: Validate all commits from PR
+        if: ${{ github.event_name == 'pull_request' }}
+        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
       - name: Lint PR
         # For PRs, run lint only on the changed files
         if: ${{ github.event_name == 'pull_request' }}
