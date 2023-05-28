@@ -22,25 +22,9 @@ Thus, I've crammed all of them into a monorepo to hopefully lower the burden of 
 
 Lerna by default will use the top-level `.npmrc` file for its npm operations. You can override this by putting in a `.npmrc` in any of the package sub-repos.
 
-### Using workspaces
+### Dependency Management/Workspaces
 
-`"useWorkspaces": true` _seems_ like the correct thing to be doing in lerna. However, it applies to yarn only, and _not_ npm workspaces(!), as seen here: https://github.com/lerna/lerna/issues/2567#issuecomment-1246395576.
-
-Therefore, the "workspace" package management needs to be done via lerna, and _not_ npm workspaces (which is why you won't see the `workspaces` key in the root `package.json` either).
-
-### Hoisting
-
-There are a number of packages, and a lot of them share dependencies. Thus, a "naive" installation would install said shared dependencies multiple times, which would be wasteful.
-
-~~Now, while npm workspaces actually _does_ solve this problem very neatly (it "hoists" the shared packages automatically to the top), we can't really use that since we have given up control over our package installations to lerna (see above).~~
-
-~~Thus, we rely on lerna's dependency hoisting. However, there are several caveats, as pointed out here: https://lerna.js.org/docs/concepts/hoisting. The most important one for us is that _dependencies will be available across other sub-repos even if you haven't installed them_.~~
-
-~~For "dev tooling" dependencies, this is a feature, not a bug - I don't want to have to install them all across the individual repos. I can just install them at the root level, and get around having to install them in every sub-repo, which, in this case, causes a clusterfuck of dependency cycle.~~
-
-~~For "normal" monorepos, though, I expect I would just install the dependencies separately anyway. This is just a very special edge case, arising from the monorepo's dev tooling being consisted of the very sub-repos that it's managing, and use [this eslint-plugin-import rule](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md) to ensure the individual parts work on their own.~~
-
-We don't have to use lerna bootstrap; apparently it picks up packages just fine with a npm workspace.
+All package management/workspaces is delegated to npm. We use `useWorkspaces: true` to tell lerna [to use npm for managing package scopes and the like](https://lerna.js.org/docs/api-reference/configuration#useworkspaces--packages).
 
 ### Automated checks (git hooks)
 

@@ -4,5 +4,12 @@
   "version": "independent",
   "packages": ["packages/*"],
   "ignoreChanges": ["**/*.md", "**/.!(npmignore)", "**/*.sh"],
-  "useNx": true
+  "useNx": true,
+  "useWorkspaces": true,
+  "command": {
+    "version": {
+      "allowBranch": "master",
+      "conventionalCommits": true
+    }
+  }
 }
