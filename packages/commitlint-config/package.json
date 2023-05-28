@@ -1,6 +1,6 @@
 {
   "name": "@janejeon/commitlint-config",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Shareable Commitlint config for semantic-release, lerna, etc.",
   "main": "commitlintrc.json",
   "homepage": "https://github.com/JaneJeon/dev/tree/master/packages/commitlint-config",
