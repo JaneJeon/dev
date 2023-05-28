@@ -1,5 +1,5 @@
-'*.{yml,yaml,js,json,ts,md}':
-  - prettier --write
+'*':
+  - prettier --write --ignore-unknown
 
 '*.{js,ts}':
   - eslint --fix

@@ -1,4 +1,5 @@
 [![Node CI](https://github.com/JaneJeon/dev/actions/workflows/ci.yml/badge.svg)](https://github.com/JaneJeon/dev/actions/workflows/ci.yml)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/JaneJeon/dev/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/JaneJeon/dev/tree/master)
 
 # Jane's Emporium (Monorepo) of Dev Tooling
 
@@ -70,3 +71,13 @@ In particular, `eslint` will automatically pick up the "nearest" (see https://es
 As for `prettier`, well, you really should only have the one at the top, so... yeah.
 
 And, if you want to get even more fancy, you can add separate `lint-staged` configuration files for each sub-repo, as it, too, does the ["look at the closest config file for the file I'm about to touch"](https://github.com/okonet/lint-staged#how-to-use-lint-staged-in-a-multi-package-monorepo) thing as `eslint`. However, in most cases, just the config at the root level should suffice, as `eslint` and `prettier` commands don't need to differ across different sub-repos, as seen above.
+
+### Semantic Commit
+
+To control all commit-based workflow for not only the various packages within this repo, but also the repo itself (i.e. the "top-level"), we expect all commits to follow the semantic commit pattern.
+
+The exact config is based on the `@janejeon/commitlint-config` package (located within the `commitlint-config/` folder), and we not only lint commit message before committing them via husky, but also check them in CI.
+
+In particular, in CI, we want to check _all_ commits for a branch to make sure that no "non-semantic" commits get through, which means having to pull down all commits when checkout out on git.
+
+To automatically generate a commit message that adheres to the semantic commit ruleset, you can run `npm run commit`, which relies on commitzen, which relies on commitlint. The commit generation can be configured via https://commitlint.js.org/#/reference-prompt.
