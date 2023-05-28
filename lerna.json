@@ -7,6 +7,9 @@
   "useNx": true,
   "useWorkspaces": true,
   "command": {
+    "changed": {
+      "conventionalCommits": true
+    },
     "version": {
       "allowBranch": "master",
       "conventionalCommits": true
