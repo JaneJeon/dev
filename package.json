@@ -25,7 +25,7 @@
     "@janejeon/eslint-config": "*",
     "@janejeon/prettier-config": "*",
     "husky": "^8.0.1",
-    "lerna": "^6.0.1",
+    "lerna": "^7.0.0",
     "lint-staged": "^13.0.3",
     "npm-run-all": "^4.1.5",
     "skip-ci": "*"
