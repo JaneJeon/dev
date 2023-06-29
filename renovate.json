@@ -1,7 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>JaneJeon/dev//packages/renovate-config/default.json"],
-  "semanticCommits": "enabled",
-  "semanticCommitType": "build",
-  "semanticCommitScope": "{{parentDir}}"
+  "extends": ["github>JaneJeon/dev//packages/renovate-config/monorepo.json"]
 }
