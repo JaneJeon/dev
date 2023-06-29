@@ -10,7 +10,8 @@
     },
     "version": {
       "allowBranch": "master",
-      "conventionalCommits": true
+      "conventionalCommits": true,
+      "message": "chore: bump package versions"
     }
   }
 }

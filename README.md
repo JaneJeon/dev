@@ -65,3 +65,16 @@ The exact config is based on the `@janejeon/commitlint-config` package (located 
 In particular, in CI, we want to check _all_ commits for a branch to make sure that no "non-semantic" commits get through, which means having to pull down all commits when checkout out on git.
 
 To automatically generate a commit message that adheres to the semantic commit ruleset, you can run `npm run commit`, which relies on commitzen, which relies on commitlint. The commit generation can be configured via https://commitlint.js.org/#/reference-prompt.
+
+### Publishing
+
+All packages are tracked by lerna using semantic commits. Packages can be versioned and published via lerna.
+
+To version and publish:
+
+1. Make sure you are on the `master` branch.
+2. Run `lerna version` to version packages according to the semantic versioning rules. This will update `package.json` versions, create git tags, and update CHANGELOG.md files.
+3. Run `lerna publish from-git` to publish the new versions to npm.
+4. Push the git tags with `git push --follow-tags`.
+
+For now, this is being run manually while I get used to this workflow.
