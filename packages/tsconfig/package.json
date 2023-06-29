@@ -1,0 +1,20 @@
+{
+  "name": "@janejeon/tsconfig",
+  "version": "0.1.0",
+  "description": "Shared tsconfig bases",
+  "homepage": "https://github.com/JaneJeon/dev/tree/master/packages/tsconfig",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JaneJeon/dev.git",
+    "directory": "packages/tsconfig"
+  },
+  "author": "Jane Jeon <git@janejeon.com>",
+  "license": "LGPL-3.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "typescript",
+    "config"
+  ]
+}

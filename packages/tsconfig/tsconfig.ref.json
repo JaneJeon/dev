@@ -1,0 +1,8 @@
+{
+  // For libraries in monorepo, using project references
+  "extends": "./tsconfig.lib.json",
+  "compilerOptions": {
+    "declarationMap": true, // recommended if using project references
+    "composite": true // needed for project references
+  }
+}

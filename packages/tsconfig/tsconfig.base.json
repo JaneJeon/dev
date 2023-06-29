@@ -1,0 +1,28 @@
+{
+  // Opinionated folder structure
+  "include": ["src"],
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    // https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c#how-can-i-make-my-typescript-project-output-esm
+    // In general, prefer specifying specific year/version,
+    // rather than relying on NodeNext/ESNext,
+    // which refer to the highest version that your typescript version supports.
+    // See which specific versions to use for the version of node we're using (v16):
+    // https://github.com/tsconfig/bases/blob/main/bases/node16.json
+    "module": "Node16", // automatically sets moduleResolution to be the same as well
+    "target": "ES2021",
+    // Settings
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    "allowArbitraryExtensions": true,
+    "resolveJsonModule": true // be careful when importing json - if it's outside of src, rootDir will be set to the "highest common directory"
+  }
+}
