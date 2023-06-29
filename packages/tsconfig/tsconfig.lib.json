@@ -1,7 +1,0 @@
-{
-  // For standalone libs
-  "extends": "./tsconfig.base.json",
-  "compilerOptions": {
-    "declaration": true
-  }
-}
