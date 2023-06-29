@@ -1,9 +1,5 @@
 {
-  // Opinionated folder structure
-  "include": ["src"],
   "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "dist",
     // https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c#how-can-i-make-my-typescript-project-output-esm
     // In general, prefer specifying specific year/version,
     // rather than relying on NodeNext/ESNext,
