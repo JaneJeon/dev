@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/JaneJeon/dev/compare/@janejeon/tsconfig@0.3.0...@janejeon/tsconfig@0.3.1) (2023-06-30)
+
+### Bug Fixes
+
+- **tsconfig:** pull out the file/directory settings, as they don't apply correctly when imported ([5625ee5](https://github.com/JaneJeon/dev/commit/5625ee5203fb9fbdbfd1e817be2391e15425f009))
+
 # [0.3.0](https://github.com/JaneJeon/dev/compare/@janejeon/tsconfig@0.2.0...@janejeon/tsconfig@0.3.0) (2023-06-29)
 
 ### Features
