@@ -1,7 +1,32 @@
 {
-  "extends": ["standard", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:n/recommended",
+    "plugin:promise/recommended",
+    "standard",
+    "prettier"
+  ],
   "rules": {
-    "no-console": "error"
+    "no-console": "error",
+    "import/order": [
+      "error",
+      {
+        "pathGroups": [
+          {
+            "pattern": "@/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "react",
+            "group": "builtin"
+          }
+        ],
+        "distinctGroup": false,
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc" }
+      }
+    ]
   },
   "overrides": [
     {
