@@ -11,7 +11,7 @@
     "version": {
       "allowBranch": "master",
       "conventionalCommits": true,
-      "message": "chore: bump package versions"
+      "message": "chore: bump package versions [skip ci]"
     }
   }
 }
