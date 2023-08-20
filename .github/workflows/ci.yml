@@ -89,6 +89,7 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: npm
+          registry-url: https://registry.npmjs.org # need to set this for NODE_AUTH_TOKEN
       - name: Install Dependencies
         run: npm ci
       - name: Publish
@@ -115,6 +116,7 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: npm
+          registry-url: https://registry.npmjs.org
       - name: Install Dependencies
         run: npm ci
       - name: Retry Publish
