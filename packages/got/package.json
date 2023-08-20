@@ -1,0 +1,38 @@
+{
+  "name": "@janejeon/got",
+  "version": "0.0.0",
+  "description": "Shared got instance",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/JaneJeon/dev/tree/master/packages/got",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JaneJeon/dev.git",
+    "directory": "packages/got"
+  },
+  "author": "Jane Jeon <git@janejeon.com>",
+  "license": "LGPL-3.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.build.json --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest",
+    "test:cov": "vitest run --coverage",
+    "test:ui": "vitest --ui",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@janejeon/eslint-config-typescript": "*",
+    "@janejeon/tsconfig": "*"
+  },
+  "peerDependencies": {
+    "got-ssrf": "^2",
+    "got-scraping": "^3"
+  }
+}
