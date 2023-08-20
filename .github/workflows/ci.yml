@@ -39,6 +39,12 @@ jobs:
         # For pushes directly to master, run lint on the whole repo
         if: ${{ github.event_name == 'push' }}
         run: npm run lint
+      - name: Typecheck PR
+        if: ${{ github.event_name == 'pull_request' }}
+        run: npm run typecheck-pr
+      - name: Typecheck Repo
+        if: ${{ github.event_name == 'push' }}
+        run: npm run typecheck
 
   test:
     runs-on: ubuntu-latest

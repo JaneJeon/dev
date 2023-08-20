@@ -18,6 +18,8 @@
     "list-changed:lerna": "lerna list --since=origin/master",
     "test": "lerna run test",
     "test-pr": "npm test -- --since=origin/master",
+    "typecheck": "lerna run typecheck",
+    "typecheck-pr": "npm run typecheck -- --since=origin/master",
     "commit": "git-cz"
   },
   "devDependencies": {
