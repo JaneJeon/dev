@@ -1,6 +1,6 @@
 {
   "name": "@janejeon/got",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Shared got instance",
   "type": "module",
   "files": [
@@ -32,7 +32,7 @@
     "@janejeon/tsconfig": "*"
   },
   "peerDependencies": {
-    "got-ssrf": "^2",
-    "got-scraping": "^3"
+    "got-scraping": "^3",
+    "got-ssrf": "^2"
   }
 }
