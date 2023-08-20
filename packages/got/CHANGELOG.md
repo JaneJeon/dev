@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/JaneJeon/dev/compare/@janejeon/got@0.1.0...@janejeon/got@0.2.0) (2023-08-20)
+
+### Features
+
+- **got:** add optional download/upload size limit to the got instance ([c6f2b5c](https://github.com/JaneJeon/dev/commit/c6f2b5c9d136d7eba7ed53b20ea05edd0880e839))
+
 # 0.1.0 (2023-08-20)
 
 ### Features
