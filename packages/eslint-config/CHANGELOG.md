@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-7](https://github.com/JaneJeon/dev/compare/@janejeon/eslint-config@3.0.0-6...@janejeon/eslint-config@3.0.0-7) (2023-08-20)
+
+**Note:** Version bump only for package @janejeon/eslint-config
+
 # [3.0.0-6](https://github.com/JaneJeon/dev/compare/@janejeon/eslint-config@3.0.0-5...@janejeon/eslint-config@3.0.0-6) (2023-06-30)
 
 ### Bug Fixes
