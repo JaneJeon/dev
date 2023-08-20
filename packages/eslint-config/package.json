@@ -13,7 +13,7 @@
   "license": "LGPL-3.0",
   "peerDependencies": {
     "eslint": "^8",
-    "eslint-config-prettier": "^8",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard": "^17",
     "eslint-plugin-import": "^2",
     "eslint-plugin-n": "^15",
