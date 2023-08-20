@@ -16,7 +16,7 @@
     "eslint-config-prettier": "^8",
     "eslint-config-standard": "^17",
     "eslint-plugin-import": "^2",
-    "eslint-plugin-n": "^15",
+    "eslint-plugin-n": "^16.0.0",
     "eslint-plugin-promise": "^6"
   },
   "publishConfig": {
