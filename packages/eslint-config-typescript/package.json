@@ -1,0 +1,26 @@
+{
+  "name": "@janejeon/eslint-config-typescript",
+  "version": "0.0.0",
+  "description": "Shareable ESLint 8.0 config (typescript)",
+  "main": "eslintrc.json",
+  "homepage": "https://github.com/JaneJeon/dev/tree/master/packages/eslint-config-typescript",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JaneJeon/dev.git",
+    "directory": "packages/eslint-config-typescript"
+  },
+  "author": "Jane Jeon <git@janejeon.com>",
+  "license": "LGPL-3.0",
+  "peerDependencies": {
+    "@janejeon/eslint-config": "*",
+    "@typescript-eslint/eslint-plugin": "^6",
+    "@typescript-eslint/parser": "^6"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "eslint",
+    "config"
+  ]
+}
