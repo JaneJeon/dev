@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Checkout Current Branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Use Node.js LTS
@@ -58,7 +58,7 @@ jobs:
 
     steps:
       - name: Checkout Current Branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           submodules: 'true'
@@ -83,7 +83,7 @@ jobs:
 
     steps:
       - name: Checkout Current Branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Set Git User
@@ -110,7 +110,7 @@ jobs:
 
     steps:
       - name: Checkout Current Branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Set Git User
