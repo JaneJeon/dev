@@ -36,6 +36,6 @@
   "peerDependencies": {
     "got": "^13",
     "got-scraping": "^3",
-    "got-ssrf": "^2"
+    "got-ssrf": "^3.0.0"
   }
 }
