@@ -1,6 +1,6 @@
 {
   "name": "@janejeon/eslint-config-typescript",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shareable ESLint 8.0 config (typescript)",
   "main": "eslintrc.json",
   "homepage": "https://github.com/JaneJeon/dev/tree/master/packages/eslint-config-typescript",
