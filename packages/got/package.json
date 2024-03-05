@@ -35,7 +35,7 @@
   },
   "peerDependencies": {
     "got": "^13",
-    "got-scraping": "^3",
+    "got-scraping": "^4.0.0",
     "got-ssrf": "^2"
   }
 }
