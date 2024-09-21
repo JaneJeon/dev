@@ -26,14 +26,14 @@
     "@janejeon/commitlint-config": "*",
     "@janejeon/eslint-config": "*",
     "@janejeon/prettier-config": "*",
-    "@vitest/coverage-istanbul": "^0.34.2",
-    "@vitest/ui": "^0.34.2",
+    "@vitest/coverage-istanbul": "^2.0.0",
+    "@vitest/ui": "^2.0.0",
     "husky": "^8.0.1",
     "lerna": "^8.0.2",
     "lint-staged": "^15.0.0",
     "npm-run-all2": "^6.0.0",
     "skip-ci": "*",
     "typescript": "^5.1.6",
-    "vitest": "^0.34.2"
+    "vitest": "^2.0.0"
   }
 }
