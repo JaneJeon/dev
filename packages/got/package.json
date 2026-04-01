@@ -34,7 +34,7 @@
     "express": "^4.18.2"
   },
   "peerDependencies": {
-    "got": "^13",
+    "got": "^14.0.0",
     "got-scraping": "^3",
     "got-ssrf": "^2"
   }
